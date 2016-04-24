@@ -6,13 +6,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import DAOs.LoginDao;
 import DAOs.ProfileDAO;
 import exceptions.DataBaseProblemException;
 import instagram.Profile;
 
-@WebServlet("/LogInServlet")
+@WebServlet("/login")
 public class LogInServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -31,10 +32,8 @@ public class LogInServlet extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("userpass");
 		Profile profile = null;
-		int number = 0;
 		try {
 			profile = new ProfileDAO().getProfileByUserName(username);
-			number = profile.getNumberOfSubscribers();
 		} catch (DataBaseProblemException e) {
 			e.printStackTrace();
 		}
@@ -43,11 +42,13 @@ public class LogInServlet extends HttpServlet {
 		response.setContentType("text/html");
 
 		if (logIn.validate(username, password)) {
-			request.getSession().setAttribute("user", username);
-			request.getSession().setAttribute("followers", number);
-			response.sendRedirect("./jsp/Home.jsp");
+			HttpSession session = request.getSession();
+			session.setMaxInactiveInterval(-1);
+			session.setAttribute("user", username);
+			response.sendRedirect("./home");
+			return;
 		} else {
-			response.sendRedirect("./html/index.html");
+			request.getRequestDispatcher("./html/index.html").forward(request, response);
 		}
 
 	}

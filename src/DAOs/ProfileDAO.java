@@ -51,13 +51,14 @@ public class ProfileDAO implements IProfile {
 			ps.setString(1, userName);
 			ResultSet result = ps.executeQuery();
 			result.next();
-			String firstName = result.getString(2);
-			String lastName = result.getString(3);
-			String email = result.getString(4);
+			String firstName = result.getString(3);
+			String lastName = result.getString(4);
+			String email = result.getString(5);
 			int follwers = result.getInt(6);
-			String password = "YOU ARE NOT ALLOWED TO SEE IT!";
+			String password = (result.getString(6));
+			System.out.println(password+" 1111");
 
-			return new Profile(firstName, lastName, userName, email, password);
+			return new Profile(firstName, lastName, userName, email, password, follwers);
 		} catch (SQLException e) {
 			e.printStackTrace();
 			throw new DataBaseProblemException("Can't find an author with ID : " + userName, e);

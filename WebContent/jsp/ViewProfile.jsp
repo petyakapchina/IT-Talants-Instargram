@@ -12,31 +12,30 @@
 <link rel='stylesheet prefetch'
 	href='http://mustafaismail.co/wp-content/uploads/gothamrnd/gothamrnd.css'>
 
-<link rel="stylesheet" href="../css/style.css" media="screen"
+<link rel="stylesheet" href="./css/style.css" media="screen"
 	type="text/css" />
-
-<link rel="stylesheet" type="text/css" href="../css/main.css" />
+<link rel="stylesheet" type="text/css" href="./css/forProfile.css" />
+<link rel="stylesheet" type="text/css" href="./css/main.css" />
 
 </head>
 <body>
-
-	<jsp:include page="header.jsp" />
+	<jsp:include page="partials/header2.jsp" />
 
 	<section> <header class="clearfix">
 	<div class="liks">
-		<i class="icon"></i> <span>${followers}</span>
+		<i class="icon"></i> <span>${subs}</span>
 	</div>
 	<div class="user">
 		<div class="avatar">
 			<img>
 		</div>
-		<h2>${user}</h2>
-		<form class="follow" method="post" action="./follow" user=${}>
+		<h2>${username}</h2>
+		<!--  <form class="follow" method="post" action="./follow" >
 			<a href="#" class="follow"><span>+</span>Follow</a>
 		</form>
 		<form class="unfollow">
 			<a href="#" class="follow" id="un"><span>-</span>Unfollow</a>
-		</form>
+		</form>  -->
 	</div>
 
 	</header>

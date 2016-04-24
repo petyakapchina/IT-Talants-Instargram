@@ -25,16 +25,15 @@ public class Profile implements IProfile, Comparable<Profile> {
 
 	static Map<String, Profile> profileFinder = new TreeMap<String, Profile>();
 
-	public Profile(String firstName, String lastName, String userName, String email, String password) {
+	public Profile(String firstName, String lastName, String userName, String email, String password, int numSubs) {
 		try {
 			this.setUserName(userName);
-			this.setPassword(password);
+			this.password = password;
 			this.setEmail(email);
 			this.firstName = firstName;
 			this.lastName = lastName;
+			this.numberOfSunscribers = numSubs;
 		} catch (InvalidUserNameException e) {
-			e.getMessage();
-		} catch (InvalidPasswordException e) {
 			e.getMessage();
 		} catch (InvalidEmailException e) {
 			e.getMessage();
@@ -146,11 +145,11 @@ public class Profile implements IProfile, Comparable<Profile> {
 	}
 
 	public String getFirstName() {
-		return firstName;
+		return this.firstName;
 	}
 
 	public String getLastName() {
-		return lastName;
+		return this.lastName;
 	}
 
 	public void deletePhotoFromGAlery(Photo p) {
@@ -158,11 +157,9 @@ public class Profile implements IProfile, Comparable<Profile> {
 			this.gallery.remove(p);
 		}
 	}
-	
-	public int getId(){
+
+	public int getId() {
 		return this.id;
 	}
-
-
 
 }

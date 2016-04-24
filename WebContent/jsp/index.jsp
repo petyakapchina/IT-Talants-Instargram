@@ -1,4 +1,3 @@
-<%@page import="servlets.LogInServlet"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix='c' uri="http://java.sun.com/jsp/jstl/core"%>
@@ -8,12 +7,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Home Page</title>
-<link rel="stylesheet" type="text/css" href="../css/main.css" />
-<link rel="stylesheet" type="text/css" href="../css/forHome.css" />
+<link rel="stylesheet" type="text/css" href="./css/main.css" />
+<link rel="stylesheet" type="text/css" href="./css/forHome.css" />
 </head>
 <body>
 
-	<jsp:include page="header.jsp" />
+	<jsp:include page="partials/header.jsp" />
 </body>
 
 <footer class="media"> <a href="http://www.facebook.com">Facebook</a>
