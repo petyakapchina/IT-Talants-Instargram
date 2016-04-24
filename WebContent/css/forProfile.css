@@ -1,0 +1,41 @@
+@CHARSET "ISO-8859-1";
+
+.menu1 {
+	padding: 10px;
+	margin: 5px;
+	background: #ffe1e7;
+	text-align: center;
+	border: medium;
+	border-color: silver;
+	border-style: double;
+}
+
+.menu2 {
+	background: #595959;
+	color: white;
+	padding: 5px;
+	margin: 10px;
+	border: medium;
+	border-color: silver;
+	border-style: double;
+}
+
+h3 {
+	border-bottom: medium;
+	border-bottom-color: silver;
+	border-bottom-style: double;
+	margin: 2px;
+	margin-bottom: 5px;
+}
+
+.profile {
+	background: #ffe1e7;
+	margin: 10px;
+	border: medium;
+	border-color: silver;
+	border-style: double;
+	padding: 5px;
+}
+
+
+

@@ -1,0 +1,41 @@
+@CHARSET "ISO-8859-1";
+
+
+.tfnewsearch{
+	background: #ffe1e7;
+	padding: 10px;
+	text-align: right;
+	margin:15px;
+	border: medium;
+	border-color: silver;
+	border-style: double;
+}
+
+input{
+	color:black;
+	background: white;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 300;
+}
+
+.btn{
+	background: black;
+	border: medium;
+	border-color: silver;
+	border-style: double;
+	margin:5px;
+	color:white;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 300;
+}
+
+.i{
+	margin:25px;
+	height: 800px;
+	background: white;
+	border: medium;
+	border-color: silver;
+	border-style: double;	
+}

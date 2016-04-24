@@ -1,0 +1,21 @@
+@CHARSET "ISO-8859-1";
+.form{
+	border: thick;
+	padding: 20px;
+	border-color:silver;
+	border-width: medium;
+	border-style: solid;
+	padding: 10px;
+	margin: 5px;
+	background: #ffe1e7;
+	text-align: center;
+}
+
+.btn{
+	color: white;
+	background: black;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 300;
+}
+
+
